@@ -1,0 +1,39 @@
+.app-header{
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 55px;
+
+  .menubar{
+    list-style-type: none;
+    li {
+      float: left;
+      padding-top: 20px;
+      a{
+        color: black;
+        text-decoration: none;
+        padding: 20px;
+        &:hover{
+          color: red;
+          border-bottom: 1px solid red;
+        }
+      }
+    }
+
+    .useritem{
+      float: right;
+      padding-right: 40px;
+    }
+  }
+
+}
+
+.app-body{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 65px;
+  overflow: auto;
+}
