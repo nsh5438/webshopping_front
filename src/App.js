@@ -6,6 +6,7 @@ import './App.scss';
 import Stores from './Stores';
 import Home from './Home';
 import User from './User';
+import Category from './Category';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <section className='app-body'>
                     <Route path='/' exact component={Home}/>
                     <Route path='/user/:command?/:userid?' component = {User}/>
+                    <Route path="/category/:id" component = {Category}/>
                 </section>
             </BrowserRouter>
         </Provider>

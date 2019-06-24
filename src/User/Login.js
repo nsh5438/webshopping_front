@@ -15,18 +15,20 @@ class Login extends Component {
         if(this.state.gotoMain)
             return <Redirect to={{pathname : '/', state : {isLogin: true}}} />;
         return (
-            <div>
-                <div className="login-content">
-                    <div className="login-header">로그인</div>
-                    <div className="input-box">
-                        아이디 : <input type="text" value={this.state.account} onChange={this.updateAccount}/>
-                    </div>
-                    <div className="input-box">
-                        비밀번호 : <input type="password" value={this.state.password} onChange={this.updatePassword}/>
-                    </div>
-                    <div className="login-button">
-                        <button onClick={this.onlogin}>로그인</button>
-                        <Link to='/user/register' >회원가입</Link>
+
+            <div className="container">
+                <div className="login-display">
+                    <div className="login-content">
+                        <div className="input-box">
+                            아이디 : <input type="text" value={this.state.account} onChange={this.updateAccount}/>
+                        </div>
+                        <div className="input-box">
+                            비밀번호 : <input type="password" value={this.state.password} onChange={this.updatePassword}/>
+                        </div>
+                        <div className="login-button">
+                            <button onClick={this.onlogin}>로그인</button>
+                            <Link to='/user/register' >회원가입</Link>
+                        </div>
                     </div>
                 </div>
             </div>
