@@ -28,18 +28,35 @@ class Index extends Component {
                 {LoginComponent}
                 <div className="main_category">
                     <button onClick={this.getSubCategory.bind(this, "상의(남)")}>상의(남)</button>
-                    <button>하의(남)</button>
+                    <button onClick={this.getSubCategory.bind(this, "하의(남)")}>하의(남)</button>
                     <button onClick={this.getSubCategory.bind(this, "상의(여)")}>상의(여)</button>
-                    <button>하의(여)</button>
-                    <button>구두</button>
-                    <button>가방</button>
-                    <button>소품</button>
+                    <button onClick={this.getSubCategory.bind(this, "하의(여)")}>하의(여)</button>
+                    <button onClick={this.getSubCategory.bind(this, "구두")}>구두</button>
+                    <button onClick={this.getSubCategory.bind(this, "가방")}>가방</button>
+                    <button onClick={this.getSubCategory.bind(this, "소품")}>소품</button>
                 </div>
                 <div className="sub_category">
                     { this.state.data.length > 0 && <CategoryItem data={this.state.data}/> }
                 </div>
                 <div className="main-content">
                     <p>메인화면</p>
+                </div>
+                <div className="product-content">
+                    <div className="left-content">
+                        <p>베스트 추천상품</p>
+
+                    </div>
+                    <div className="center-content">
+                        <p>베스트 추천상품</p>
+                        <div className="product">
+                            <Link to="/product">상품이름</Link>
+                            <div>상품내용</div>
+                            <div>상품가격</div>
+                        </div>
+                    </div>
+                    <div className="right-content">
+                        <p>배너광고</p>
+                    </div>
                 </div>
             </div>
         );

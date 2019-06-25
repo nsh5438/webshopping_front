@@ -1,0 +1,23 @@
+.category-content{
+  height: 100%;
+  p{
+    background-color: coral;
+    margin: 0;
+    padding: 16px;
+    color: #ffffff;
+  }
+}
+
+.category-product{
+  width: 500px;
+  float: left;
+  border: 1px solid lightgray;
+  text-align: center;
+  margin: 50px;
+  padding: 20px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}

@@ -7,6 +7,7 @@ import Stores from './Stores';
 import Home from './Home';
 import User from './User';
 import Category from './Category';
+import Product from './Product';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                     <Route path='/' exact component={Home}/>
                     <Route path='/user/:command?/:userid?' component = {User}/>
                     <Route path="/category/:id" component = {Category}/>
+                    <Route path="/product/:id" component = {Product}/>
                 </section>
             </BrowserRouter>
         </Provider>
