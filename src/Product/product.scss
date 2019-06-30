@@ -1,0 +1,33 @@
+.product-detail-content{
+  height: 400px;
+  padding: 50px;
+  img{
+    margin-left: 500px;
+  }
+}
+
+.product-detail-info{
+
+  width: 400px;
+  float: right;;
+  margin-right: 400px;
+  margin-top: 200px;
+}
+.product-name{
+  font-size: 20pt;
+}
+
+
+.product-detail-long_info{
+  height: 400px;
+  div{
+    text-align: center;
+  }
+  p{
+    background: coral;
+    height: 30px;
+    padding-top: 10px;
+    color: white;
+  }
+}
+

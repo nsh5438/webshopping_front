@@ -1,0 +1,26 @@
+.review-content{
+  margin: 30px;
+}
+
+.review-item-title{
+  background-color: antiquewhite;
+}
+
+.review-item-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid silver;
+  div{
+    float: left;
+    padding: 20px;
+  }
+}
+
+.review-item{
+  width: 300px;
+}
+
+.review-add-content{
+  margin: 30px;
+}

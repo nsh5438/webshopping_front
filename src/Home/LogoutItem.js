@@ -9,10 +9,8 @@ class LogoutItem extends Component {
         let user = this.props.stores.UserStore.item;
         return (
             <div>
-                <div className="login-content">
-                        {user.username}님
-                    <Link to= '/' onClick={this.onLogout} >로그아웃</Link>
-                </div>
+                {user.username}님
+                <Link to= '/' onClick={this.onLogout} >로그아웃</Link>
             </div>
         );
     }

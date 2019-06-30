@@ -2,30 +2,42 @@ import React, {Component} from 'react';
 import {inject,observer} from 'mobx-react'
 import LoginItem from './LoginItem';
 import CategoryItem from './CategoryItem';
+import BestItem from './BestList';
 import LogoutItem from './LogoutItem';
 import './home.scss';
-import {Link} from "react-router-dom";
+import image_world from './assets/og-frombts-call.jpg';
+import image_star from './assets/SuperStar-BTS-download.jpg';
 
 @inject('stores')
 @observer
 class Index extends Component {
-
     state = {
-        data: []
+        data: [],
+        best_item: []
     };
-    componentDidUpdate(prevProps, prevState) {
-
+    componentDidMount() {
+        this.props.stores.ProductStore.getBestList();
     }
     render() {
+
         let LoginComponent = null;
         if (this.props.stores.UserStore.islogin) {
             LoginComponent = <LogoutItem />;
         } else {
             LoginComponent = <LoginItem />
         }
+        let u = this.props.stores.UserStore;
+        let p = this.props.stores.ProductStore;
+        let link = '/';
+        if (u.islogin){
+            link = `/cart/${u.item.id}`;
+        }
         return (
             <div>
-                {LoginComponent}
+
+                <div className="login-move">
+                    {LoginComponent}
+                </div>
                 <div className="main_category">
                     <button onClick={this.getSubCategory.bind(this, "상의(남)")}>상의(남)</button>
                     <button onClick={this.getSubCategory.bind(this, "하의(남)")}>하의(남)</button>
@@ -42,20 +54,14 @@ class Index extends Component {
                     <p>메인화면</p>
                 </div>
                 <div className="product-content">
-                    <div className="left-content">
-                        <p>베스트 추천상품</p>
-
-                    </div>
                     <div className="center-content">
                         <p>베스트 추천상품</p>
-                        <div className="product">
-                            <Link to="/product">상품이름</Link>
-                            <div>상품내용</div>
-                            <div>상품가격</div>
-                        </div>
+                        { p.best_item && <BestItem best_item={p.best_item}/> }
                     </div>
                     <div className="right-content">
                         <p>배너광고</p>
+                        <img src={image_world} alt=""/>
+                        <img src={image_star} alt=""/>
                     </div>
                 </div>
             </div>

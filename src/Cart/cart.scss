@@ -1,0 +1,40 @@
+.cart-notice{
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid silver;
+}
+
+.cart-list{
+  margin-top: 50px;
+}
+
+.cart-order{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.cart-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div{
+    float: left;
+    padding: 20px;
+  }
+  button{
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    &:hover{
+      color: red;
+    }
+  }
+}
+

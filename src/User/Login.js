@@ -15,7 +15,10 @@ class Login extends Component {
         if(this.state.gotoMain)
             return <Redirect to={{pathname : '/', state : {isLogin: true}}} />;
         return (
-
+        <div>
+            <div className="main-content">
+                <p>로그인</p>
+            </div>
             <div className="container">
                 <div className="login-display">
                     <div className="login-content">
@@ -32,6 +35,7 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 

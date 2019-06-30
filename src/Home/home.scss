@@ -2,6 +2,9 @@
   position: absolute;
   right: 0;
   padding: 30px;
+  div{
+    padding-top: 10px;
+  }
   a{
     color: black;
     text-decoration: none;
@@ -82,12 +85,16 @@
     margin: 0;
     padding: 16px;
   }
+
+  img{
+    width: inherit;
+  }
 }
 
 .center-content{
   position: absolute;
   //background-color: lightcoral;
-  left: 500px;
+  left: 0px;
   right: 500px;
   height: 100%;
   p{

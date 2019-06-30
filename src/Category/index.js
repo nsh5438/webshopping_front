@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import './category.scss'
 import {inject,observer} from 'mobx-react'
 import ProductItem from './ProductItem'
+import CategoryItem from '../Home/CategoryItem';
 @inject('stores')
 @observer
 class Index extends Component {
@@ -13,7 +14,7 @@ class Index extends Component {
         this.props.stores.ProductStore.getProduct(this.props.match.params.id);
     }
     render() {
-
+        this.props.stores.ProductStore.getProduct(this.props.match.params.id);
         let id = this.props.match.params.id;
         let main_category = "";
         let sub_category = "";
@@ -30,8 +31,13 @@ class Index extends Component {
 
         return (
             <div>
-                <div className="main-content">
-                    <p>{main_category} - {sub_category}</p>
+                <div className="category-main-content">
+                    <div className="category-left-content category-sub">
+                        { this.props.stores.CategoryStore.item && <CategoryItem data={this.props.stores.CategoryStore.item}/> }
+                    </div>
+                    <div className="category-center-content">
+                        <p>{main_category} - {sub_category}</p>
+                    </div>
                 </div>
                 <div className="">
                     <div className="category-content">

@@ -27,7 +27,7 @@ class CategoryStore{
                     "Content-Type":"application/json; charset=UTF-8"
                 },
                 method: 'post',
-                timeout: 300,
+                timeout: 6000,
                 data: data
             });
             if (response.status === 200){

@@ -3,6 +3,7 @@
   padding: 30px;
 }
 .login-display{
+  padding-top: 100px;
   display:table-cell;text-align:center;vertical-align:middle;
 }
 .login-content{
@@ -36,4 +37,55 @@
       color: red;
     }
   }
+}
+
+.add-button{
+  button{
+    background:none;
+    color:inherit;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+    &:hover{
+      color: red;
+    }
+  }
+}
+
+.add-content{
+  padding: 40px;
+}
+
+.add-header{
+  padding: 20px;
+  font-size: 20pt;
+}
+
+.add-info{
+  padding: 20px;
+  border-bottom: 1px solid silver;
+  border-top: 1px solid silver;
+}
+
+.input-box{
+  padding: 10px;
+}
+
+.idcheck{
+  float: left;
+  padding-right: 20px;
+}
+
+.usercheck{
+  padding: 10px;
+}
+
+.check-content{
+  width: 800px;
+  height: 100px;
+  margin-top: 10px;
+  background-color: lightgray;
+  border: 1px solid black;
 }
